@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 
 import {NewsContainer, NewsWrapper, NewsCard, NewsIcon, NewsH2, NewsHeading} from '../News/NewsElements'
 import axios from 'axios'
-
+import {Grid} from 'react-loading-icons'
 
 const Blogs = () => {
 
@@ -43,7 +43,7 @@ const Blogs = () => {
         </NewsCard>))}
         
       </NewsWrapper>
-      : <div>The page is loading, please wait...</div>}
+      : <Grid />}
       
     </NewsContainer>
   )

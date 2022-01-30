@@ -12,6 +12,7 @@ import Sidebar from '../components/SideBar/Sidebar'
 
 
 
+import {Puff} from 'react-loading-icons'
 
 import { NewsH1,  NewsCard, NewsIcon} from '../components/News/NewsBlogsPageStyle';
 
@@ -133,6 +134,7 @@ export default function News() {
           <Info {...WeeklyNews}/>
           <div style={{backgroundColor: "#010606",marginTop:"-100px", width: "100%"}}>
           <Container className={classes.cardGrid} maxWidth="70%" >
+          {!news.length ? <Puff style={{marginLeft:"48%",marginBottom:"4%"}}/>:<></>}
           <Grid container spacing={7}>
             {news.map((newsIterator) => (
               <Grid item xs={12} sm={6} md={4}>
@@ -170,6 +172,7 @@ export default function News() {
           </div>
           <Info {...Researchpapers}/>
           <div style={{backgroundColor: "lightgray",marginTop:"-100px"}}>
+            {!researchPapers.length ? <Puff style={{marginLeft:"48%",marginBottom:"4%"}}/>:<></>}
             <Container className={classes.cardGrid} maxWidth="80%" >
           <Grid container spacing={7}>
             {researchPapers.map((paper) => (

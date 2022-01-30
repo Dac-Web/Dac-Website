@@ -15,6 +15,8 @@ import {BlogsCard, BlogsIcon, BlogsH1} from '../components/BlogsHome/BlogsHomeEl
 import axios from 'axios'
 import { useStateValue } from '../StateProvider';
 
+import {Puff} from 'react-loading-icons'
+
 const useStyles = makeStyles((theme) => ({
   icon: {
     marginRight: theme.spacing(2),
@@ -94,6 +96,7 @@ export default function Blog2() {
           {/* End hero unit */}
           <Info {...Ourblog}/>
           <div style={{backgroundColor: "#010606",marginTop:"-100px"}}>
+          {!blogs.length ? <Puff style={{marginLeft:"48%",marginBottom:"4%"}}/>:<></>}
           <Container className={classes.cardGrid} maxWidth="100%" >
           <Grid container spacing={7}>
             {blogs.map((blog) => (

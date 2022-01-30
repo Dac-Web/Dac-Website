@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import {NewsContainer, NewsWrapper, NewsCard, NewsIcon, NewsH2, NewsHeading} from './NewsElements'
 import axios from 'axios'
-
+import {Grid} from 'react-loading-icons'
 
 const News = () => {
 
@@ -53,7 +53,11 @@ const News = () => {
         </NewsCard>))}
         
       </NewsWrapper>
-      : <div>The page is loading, please wait...</div>}
+      : <div>
+        
+        <Grid/>
+        
+      </div>}
       
       
     </NewsContainer>

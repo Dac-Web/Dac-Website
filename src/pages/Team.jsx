@@ -10,7 +10,7 @@ import ExplorersImg from '../images/explorers.png'
 import AnalystsImg from '../images/analysts.png'
 import Sidebar from '../components/SideBar/Sidebar'
 import Navbar from '../components/Navbar/Navbar'
-
+import { FaGithub, FaLinkedin} from 'react-icons/fa'
 
 
 export const Card = styled.div`
@@ -79,12 +79,34 @@ export const CardHeader = styled.div`
 export const CardImg = styled.img`
     height: 200px;
     width: 220px;
-
+    margin-left : 1%;
     @media screen and (max-width: 768px) {
     height : 100px;
     width : 110px;
   }
 
+`;
+
+export const CardImg2 = styled.img`
+    height: 240px;
+    width: 220px;
+    margin-left : 1%;
+    border-radius : 20px;
+    @media screen and (max-width: 768px) {
+    height : 120px;
+    width : 110px;
+  }
+
+  &:hover
+{
+    transition : all 0.2s ease-out;
+    /* transform : scale(1.03); */
+    text-decoration : none;
+    color : black;
+    border : 2px solid #01bf71;
+    color : black;
+    
+}
 `;
 
 
@@ -95,10 +117,22 @@ export const CardBodyContainer = styled.div`
     width : 100%;
 `;
 
+export const CardBodyContainer2 = styled.div`
+    display : flex;
+    justify-content : space-around;
+    margin-bottom : 100px;
+    width : 100%;
+`;
+
 export const CardBody = styled.div`
     justify-content : center;
     height: auto;
     color : white;
+    width: 80%;
+    padding-left : 10%;
+    padding-right : 10%;
+    font-size : 1.2rem;
+    // background-color : red;
     margin-right : 10px;
     @media screen and (max-width: 768px) {
     display :none;
@@ -138,6 +172,7 @@ const CardContents = styled.div`
   }
 `
 
+
 const Team = () => {
 
     const [isOpen, setIsOpen] = useState(false)
@@ -147,12 +182,53 @@ const Team = () => {
     setIsOpen(!isOpen);
     }
 
+    const clickHandler = (link) => {
+        window.open(link)
+      }
+
     return (
         <div className = "Team">
             <Sidebar isOpen={isOpen} toggle={toggle} />
             <Navbar toggle={toggle}/>
             <Card>
                 <CardContainer>
+
+                <CardServices >
+                        <CardContents>
+                            <CardHeaderContainer>
+                                <CardHeader>
+                                    Creators of DAC Website
+                                </CardHeader>
+                            </CardHeaderContainer>
+
+                            <CardBodyContainer2>
+                                <div style={{display: "flex", flexDirection: "column", justifyContent:"center", alignItems:"center"}}>
+                                     <div style={{color: "white",fontSize : "1.8rem", marginBottom: "0.5rem"}}>Deepakindresh</div>
+                                     <CardImg2 src = {"https://cdn.discordapp.com/attachments/937023844143755264/937024139385012224/formals1.PNG"}
+                                     onClick = {e => clickHandler('https://www.linkedin.com/in/deepakindresh-n/')} />
+                                     <div style={{color: "white",fontSize : "1rem", marginTop: "0.5rem"}}>Web-Dev Lead / Full Stack</div>
+                                </div>
+
+                                <div style={{display: "flex", flexDirection: "column", justifyContent:"center", alignItems:"center"}}>
+                                    <div style={{color: "white",fontSize : "1.8rem", marginBottom: "0.5rem"}}>Harshavardhan</div>
+                                    <CardImg2 src = {"https://cdn.discordapp.com/attachments/937023844143755264/937023875227734056/harsha.jpg"}
+                                    onClick = {e => clickHandler('https://www.linkedin.com/in/harshavardhan-jothi-kumar-259ba8185/')}/>
+                                    <div style={{color: "white",fontSize : "1rem", marginTop: "0.5rem"}}>Full Stack Web Developer</div>
+                                </div>
+
+                                <div style={{display: "flex", flexDirection: "column", justifyContent:"center", alignItems:"center"}}>
+                                    <div style={{color: "white",fontSize : "1.8rem", marginBottom: "0.5rem"}}>Nitin</div>
+                                    <CardImg2 src = {"https://media.discordapp.net/attachments/937023844143755264/937053121006424064/IMG_20210508_191907581_2.png?width=681&height=670"}
+                                    onClick = {e => clickHandler('https://www.linkedin.com/in/nitin-narayanan-n/')}/>
+                                    <div style={{color: "white",fontSize : "1rem", marginTop: "0.5rem"}}>Backend Developer</div>
+                                </div>
+                                
+                            </CardBodyContainer2>
+
+                        </CardContents>  
+                    </CardServices>
+
+
                     <CardServices >
                         <CardContents>
                             <CardHeaderContainer>
@@ -174,9 +250,6 @@ const Team = () => {
                             </CardBodyContainer>
 
                             <CardFooterContainer>
-                                <CardFooter>
-                                    Department Head Names and details
-                                </CardFooter>
                             </CardFooterContainer>
                         </CardContents>  
                     </CardServices>
@@ -201,9 +274,9 @@ handles)
                             </CardBodyContainer>
 
                             <CardFooterContainer>
-                                <CardFooter>
+                                {/* <CardFooter>
                                     Department Head Names and details
-                                </CardFooter>
+                                </CardFooter> */}
                             </CardFooterContainer>
                         </CardContents>  
                     </CardServices>
@@ -229,9 +302,9 @@ bonding sessions, etc.
                             </CardBodyContainer>
 
                             <CardFooterContainer>
-                                <CardFooter>
+                                {/* <CardFooter>
                                     Department Head Names and details
-                                </CardFooter>
+                                </CardFooter> */}
                             </CardFooterContainer>
                         </CardContents>  
                     </CardServices>
@@ -255,9 +328,9 @@ however need be. (Topics for blog )
                             </CardBodyContainer>
 
                             <CardFooterContainer>
-                                <CardFooter>
+                                {/* <CardFooter>
                                     Department Head Names and details
-                                </CardFooter>
+                                </CardFooter> */}
                             </CardFooterContainer>
                         </CardContents>  
                     </CardServices>
@@ -284,9 +357,9 @@ skills)
                             </CardBodyContainer>
 
                             <CardFooterContainer>
-                                <CardFooter>
+                                {/* <CardFooter>
                                     Department Head Names and details
-                                </CardFooter>
+                                </CardFooter> */}
                             </CardFooterContainer>
                         </CardContents>  
                     </CardServices>
