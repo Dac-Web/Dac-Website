@@ -17,10 +17,10 @@ import {useStateValue} from './StateProvider'
 import Footer from './components/Footer/Footer';
 import Team from './pages/Team'
 import Profile from './pages/Profile';
-import CreateBlog from './components/CreateBlog/CreateBlog';
 import CreateEventPage from './pages/CreateEventPage';
 import Join from './pages/JoinUs';
 import RegAdminPage from './components/RegistrationAdmin/RegAdminPage';
+import Contact from './pages/Contact';
 
 
 
@@ -28,19 +28,12 @@ import RegAdminPage from './components/RegistrationAdmin/RegAdminPage';
 function App() {
 
 
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggle = () =>{
-    setIsOpen(!isOpen);
-  }
-
+  
   //Usestates
 
   const [{user}, dispatch] = useStateValue();
-  const [username,setUsername] = useState()
-  const [email,setEmail] = useState()
+  
   const [role,setRole] = useState()
-  const [dp,setDp] = useState()
 
   async function getUser(authUser)
     {
@@ -144,6 +137,11 @@ function App() {
 
         <Route exact path = '/AboutUs' component = {About}>
         <About/>
+        <Footer/>
+        </Route>
+
+        <Route exact path = '/ContactUs' component = {Contact}>
+        <Contact/>
         <Footer/>
         </Route>
 

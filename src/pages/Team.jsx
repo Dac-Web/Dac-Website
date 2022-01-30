@@ -10,7 +10,6 @@ import ExplorersImg from '../images/explorers.png'
 import AnalystsImg from '../images/analysts.png'
 import Sidebar from '../components/SideBar/Sidebar'
 import Navbar from '../components/Navbar/Navbar'
-import { FaGithub, FaLinkedin} from 'react-icons/fa'
 
 
 export const Card = styled.div`

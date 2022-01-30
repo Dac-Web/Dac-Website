@@ -118,6 +118,7 @@ export const Aboutus = {
   link: 'JoinUs'
 };
 
+
 export const Joinus = {
   id: 'Joinus',
   lightBg: false,
