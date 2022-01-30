@@ -229,6 +229,10 @@ const Events = () => {
     setIsOpen(!isOpen);
     }
 
+    const clickHandler = (link) => {
+        window.open(link)
+      }
+
     useEffect(() => {
 
         getEvents()
@@ -312,7 +316,7 @@ const Events = () => {
             </Timelinebackground>
             
             {
-                eventstate === "ongoing" ? events.map((eventIndex) => {
+                eventstate === "ongoing" ? events.length ? events.map((eventIndex) => {
 
                     // console.log("This is event indices inside renderer ",eventIndex)
                     
@@ -341,16 +345,16 @@ const Events = () => {
                                     }
                                 </SocialIcons>
                                
-                                <EventRegisterButton>Register Now</EventRegisterButton>
+                                <EventRegisterButton onClick = {e => clickHandler(eventIndex.Registration_link)}>Register Now</EventRegisterButton>
                             </EventLeft>
 
                             <EventRight>
                                 <EventPhoto src = {eventIndex.Poster_link}/>
-                                <EventRegisterButton1>Register Now</EventRegisterButton1>
+                                <EventRegisterButton1 onClick = {e => clickHandler(eventIndex.Registration_link)}>Register Now</EventRegisterButton1>
                             </EventRight>
                 
                         </EventsContainer>     
-                    )}):  eventstate === "completed" ? completedevents.map((eventIndex) => {
+                    )}):<h3 style={{color:"white", paddingTop:"20%", justifySelf:"center", alignSelf:'center'}}>Currently No events in this category</h3>:  eventstate === "completed" ? completedevents.length ? completedevents.map((eventIndex) => {
 
                         // console.log("This is event indices inside renderer ",eventIndex)
                         
@@ -379,16 +383,16 @@ const Events = () => {
                                         }
                                     </SocialIcons>
                                    
-                                    <EventRegisterButton>Register Now</EventRegisterButton>
+                                    <EventRegisterButton>Completed</EventRegisterButton>
                                 </EventLeft>
     
                                 <EventRight>
                                     <EventPhoto src = {eventIndex.Poster_link}/>
-                                    <EventRegisterButton1>Register Now</EventRegisterButton1>
+                                    <EventRegisterButton1>Completed</EventRegisterButton1>
                                 </EventRight>
                     
                             </EventsContainer>     
-                        )}): upcomingevents.map((eventIndex) => {
+                        )}):<h3 style={{color:"white", paddingTop:"20%", justifySelf:"center", alignSelf:'center'}}>Currently No events in this category</h3>: upcomingevents.length ? upcomingevents.map((eventIndex) => {
 
                             // console.log("This is event indices inside renderer ",eventIndex)
                             
@@ -419,17 +423,17 @@ const Events = () => {
                                             }
                                         </SocialIcons>
                                        
-                                        <EventRegisterButton>Register Now</EventRegisterButton>
+                                        <EventRegisterButton onClick = {e => clickHandler(eventIndex.Registration_link)}>Register Now</EventRegisterButton>
                                     </EventLeft>
         
                                     <EventRight>
                                         <EventPhoto src = {eventIndex.Poster_link}/>
-                                        <EventRegisterButton1>Register Now</EventRegisterButton1>
+                                        <EventRegisterButton1 onClick = {e => clickHandler(eventIndex.Registration_link)}>Register Now</EventRegisterButton1>
                                     </EventRight>
                         
                                 </EventsContainer>  
                                          
-                            )})
+                            )}):<h3 style={{color:"white", paddingTop:"20%", justifySelf:"center", alignSelf:'center'}}>Currently No events in this category</h3>
                                 
             }
                 {role === 'A'? <EventAddButton to="/Events/CreateEvent">+</EventAddButton> : <div/>}

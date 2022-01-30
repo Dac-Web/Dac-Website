@@ -196,6 +196,27 @@ const Team = () => {
                         <CardContents>
                             <CardHeaderContainer>
                                 <CardHeader>
+                                    Club Heads
+                                </CardHeader>
+                            </CardHeaderContainer>
+
+                            <CardBodyContainer2>
+                                <div style={{display: "flex", flexDirection: "column", justifyContent:"center", alignItems:"center"}}>
+                                     <div style={{color: "white",fontSize : "1.8rem", marginBottom: "0.5rem"}}>Mihir Gupte</div>
+                                     <CardImg2 src = {"https://cdn.discordapp.com/attachments/937023844143755264/937429248115871744/25b231c1-1089-410d-92b7-5191874d0f53.png"}
+                                     onClick = {e => clickHandler('https://github.com/mihirgupte')} />
+                                     <div style={{color: "white",fontSize : "1rem", marginTop: "0.5rem"}}>Club Head</div>
+                                </div>
+                                
+                            </CardBodyContainer2>
+
+                        </CardContents>  
+                    </CardServices>
+
+                <CardServices >
+                        <CardContents>
+                            <CardHeaderContainer>
+                                <CardHeader>
                                     Creators of DAC Website
                                 </CardHeader>
                             </CardHeaderContainer>

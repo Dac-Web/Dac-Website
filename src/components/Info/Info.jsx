@@ -8,7 +8,7 @@ const clickHandler = (link) => {
 }
 
 
-const Info = ({lightBg, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel, alt, img, primary, dark, dark2, link, link2}) => {
+const Info = ({lightBg, id, imgStart, topLine, lightText, headline, darkText, description, description2, buttonLabel, alt, img, primary, dark, dark2, link, link2}) => {
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -18,7 +18,7 @@ const Info = ({lightBg, id, imgStart, topLine, lightText, headline, darkText, de
               <TextWrapper>
                 <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle darkText={darkText}>{description}</Subtitle>
+                <Subtitle darkText={darkText}>{description}<br/><br/>{description2}</Subtitle>
                 {buttonLabel != "Nil" ? <BtnWrap>
                   {link ? <Button to={link}
                   smooth={true}
