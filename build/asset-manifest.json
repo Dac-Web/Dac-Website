@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.d603eee8.chunk.css",
-    "main.js": "/static/js/main.886ac1bc.chunk.js",
-    "main.js.map": "/static/js/main.886ac1bc.chunk.js.map",
+    "main.css": "/static/css/main.ef8925f3.chunk.css",
+    "main.js": "/static/js/main.01d56f9c.chunk.js",
+    "main.js.map": "/static/js/main.01d56f9c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.33649951.js",
     "runtime-main.js.map": "/static/js/runtime-main.33649951.js.map",
-    "static/css/2.70c5600c.chunk.css": "/static/css/2.70c5600c.chunk.css",
-    "static/js/2.48f8a348.chunk.js": "/static/js/2.48f8a348.chunk.js",
-    "static/js/2.48f8a348.chunk.js.map": "/static/js/2.48f8a348.chunk.js.map",
+    "static/css/2.9c6fb722.chunk.css": "/static/css/2.9c6fb722.chunk.css",
+    "static/js/2.d344aa20.chunk.js": "/static/js/2.d344aa20.chunk.js",
+    "static/js/2.d344aa20.chunk.js.map": "/static/js/2.d344aa20.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/2.70c5600c.chunk.css.map": "/static/css/2.70c5600c.chunk.css.map",
-    "static/css/main.d603eee8.chunk.css.map": "/static/css/main.d603eee8.chunk.css.map",
-    "static/js/2.48f8a348.chunk.js.LICENSE.txt": "/static/js/2.48f8a348.chunk.js.LICENSE.txt",
+    "static/css/2.9c6fb722.chunk.css.map": "/static/css/2.9c6fb722.chunk.css.map",
+    "static/css/main.ef8925f3.chunk.css.map": "/static/css/main.ef8925f3.chunk.css.map",
+    "static/js/2.d344aa20.chunk.js.LICENSE.txt": "/static/js/2.d344aa20.chunk.js.LICENSE.txt",
     "static/media/Curator.b86e84e1.png": "/static/media/Curator.b86e84e1.png",
     "static/media/Socialites.c6cbab3a.png": "/static/media/Socialites.c6cbab3a.png",
     "static/media/aboutus.b568eb25.svg": "/static/media/aboutus.b568eb25.svg",
     "static/media/analysts.4f202ed0.png": "/static/media/analysts.4f202ed0.png",
     "static/media/blog.f1ce9057.svg": "/static/media/blog.f1ce9057.svg",
+    "static/media/contactus.b0d7610b.svg": "/static/media/contactus.b0d7610b.svg",
     "static/media/daclogo.dc371960.png": "/static/media/daclogo.dc371960.png",
     "static/media/dataset-cover.04da4f3c.jpg": "/static/media/dataset-cover.04da4f3c.jpg",
     "static/media/dataset-cover2.960c2000.jpg": "/static/media/dataset-cover2.960c2000.jpg",
@@ -33,9 +34,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.33649951.js",
-    "static/css/2.70c5600c.chunk.css",
-    "static/js/2.48f8a348.chunk.js",
-    "static/css/main.d603eee8.chunk.css",
-    "static/js/main.886ac1bc.chunk.js"
+    "static/css/2.9c6fb722.chunk.css",
+    "static/js/2.d344aa20.chunk.js",
+    "static/css/main.ef8925f3.chunk.css",
+    "static/js/main.01d56f9c.chunk.js"
   ]
 }
