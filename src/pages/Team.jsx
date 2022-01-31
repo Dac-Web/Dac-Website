@@ -32,7 +32,6 @@ export const CardContainer = styled.div`
 export const CardServices = styled(LinkR)`
 display : flex;
 flex-direction : column;
-overflow: hidden;
 background-color : black;
 padding: 0 0 32px;
 margin: 48px auto 0;
@@ -56,17 +55,37 @@ text-decoration : none;
     color : black;
     
 }
+
+@media screen and (max-width: 768px) {
+    border : 2px solid white;
+    height : auto;
+    justify-content : center;
+    justify-items : center;
+    align-items : center;
+    align-content : center;
+  }
 `;
 
 export const CardHeaderContainer = styled.div`
     display : flex;
     justify-content : center;
+    align-items : center;
+    justify-self: center;
+    align-self: center;
     margin-bottom : 100px;
     margin-top : 100px;
+    
+    @media screen and (max-width: 768px) {
+        margin-bottom : 50px;
+        margin-top : 50px;
+      }
 `;
 
 export const CardHeader = styled.div`
     justify-content : center;
+    align-items : center;
+    justify-self: center;
+    align-self: center;
     font-family : sans-serif;
     font-size : 2.2rem;
     font-weight : bold;
@@ -79,8 +98,10 @@ export const CardImg = styled.img`
     height: 200px;
     width: 220px;
     margin-left : 1%;
+    margin-top: -2%;
     @media screen and (max-width: 768px) {
     height : 100px;
+    margin-bottom : 50px;
     width : 110px;
   }
 
@@ -114,13 +135,24 @@ export const CardBodyContainer = styled.div`
     justify-content : center;
     margin-bottom : 100px;
     width : 100%;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items : center;
+        justify-content : center;
+
+    }
 `;
 
 export const CardBodyContainer2 = styled.div`
     display : flex;
     justify-content : space-around;
+    align-items : center;
     margin-bottom : 100px;
     width : 100%;
+    margin-top : -50px;
+    @media screen and (max-width: 768px) {
+        flex-direction : column;
+      }
 `;
 
 export const CardBody = styled.div`
@@ -131,10 +163,10 @@ export const CardBody = styled.div`
     padding-left : 10%;
     padding-right : 10%;
     font-size : 1.2rem;
-    // background-color : red;
     margin-right : 10px;
     @media screen and (max-width: 768px) {
-    display :none;
+        width: 100%;
+        margin-right : 0px;
   }
 `;
 export const CardFooterContainer = styled.div`
@@ -171,6 +203,18 @@ const CardContents = styled.div`
   }
 `
 
+const CardPerson = styled.div`
+    display: flex; 
+    flex-direction: column; 
+    justify-content : center;
+    align-items : center;
+
+    @media screen and (max-width: 768px) {
+    margin-top : 50px;
+  }
+}
+`
+
 
 const Team = () => {
 
@@ -201,12 +245,26 @@ const Team = () => {
                             </CardHeaderContainer>
 
                             <CardBodyContainer2>
-                                <div style={{display: "flex", flexDirection: "column", justifyContent:"center", alignItems:"center"}}>
+                                <CardPerson>
+                                     <div style={{color: "white",fontSize : "1.8rem", marginBottom: "0.5rem"}}>Dr.Syed Ibrahim</div>
+                                     <CardImg2 src = {"https://cdn.discordapp.com/attachments/937023844143755264/937584410595840010/50392-255x319.png"}
+                                     onClick = {e => clickHandler('https://chennai.vit.ac.in/member/dr-syed-ibrahim-s-p/')} />
+                                     <div style={{color: "white",fontSize : "1rem", marginTop: "0.5rem"}}>Professor Incharge</div>
+                                </CardPerson>
+
+                                <CardPerson>
                                      <div style={{color: "white",fontSize : "1.8rem", marginBottom: "0.5rem"}}>Mihir Gupte</div>
                                      <CardImg2 src = {"https://cdn.discordapp.com/attachments/937023844143755264/937429248115871744/25b231c1-1089-410d-92b7-5191874d0f53.png"}
                                      onClick = {e => clickHandler('https://github.com/mihirgupte')} />
                                      <div style={{color: "white",fontSize : "1rem", marginTop: "0.5rem"}}>Club Head</div>
-                                </div>
+                                </CardPerson>
+                                
+                                <CardPerson>
+                                     <div style={{color: "white",fontSize : "1.8rem", marginBottom: "0.5rem"}}>Ashwin Iyer</div>
+                                     <CardImg2 src = {"https://cdn.discordapp.com/attachments/937023844143755264/937588026899587092/ae318e08-9ced-4127-8e33-1780a2a85ff1.jpg"}
+                                     onClick = {e => clickHandler('https://www.linkedin.com/in/ashwiniyer176/')} />
+                                     <div style={{color: "white",fontSize : "1rem", marginTop: "0.5rem"}}>Club Head</div>
+                                </CardPerson>
                                 
                             </CardBodyContainer2>
 
@@ -222,26 +280,26 @@ const Team = () => {
                             </CardHeaderContainer>
 
                             <CardBodyContainer2>
-                                <div style={{display: "flex", flexDirection: "column", justifyContent:"center", alignItems:"center"}}>
+                                <CardPerson>
                                      <div style={{color: "white",fontSize : "1.8rem", marginBottom: "0.5rem"}}>Deepakindresh</div>
                                      <CardImg2 src = {"https://cdn.discordapp.com/attachments/937023844143755264/937024139385012224/formals1.PNG"}
                                      onClick = {e => clickHandler('https://www.linkedin.com/in/deepakindresh-n/')} />
                                      <div style={{color: "white",fontSize : "1rem", marginTop: "0.5rem"}}>Web-Dev Lead / Full Stack</div>
-                                </div>
+                                </CardPerson>
 
-                                <div style={{display: "flex", flexDirection: "column", justifyContent:"center", alignItems:"center"}}>
+                                <CardPerson>
                                     <div style={{color: "white",fontSize : "1.8rem", marginBottom: "0.5rem"}}>Harshavardhan</div>
                                     <CardImg2 src = {"https://cdn.discordapp.com/attachments/937023844143755264/937023875227734056/harsha.jpg"}
                                     onClick = {e => clickHandler('https://www.linkedin.com/in/harshavardhan-jothi-kumar-259ba8185/')}/>
                                     <div style={{color: "white",fontSize : "1rem", marginTop: "0.5rem"}}>Full Stack Web Developer</div>
-                                </div>
+                                </CardPerson>
 
-                                <div style={{display: "flex", flexDirection: "column", justifyContent:"center", alignItems:"center"}}>
+                                <CardPerson>
                                     <div style={{color: "white",fontSize : "1.8rem", marginBottom: "0.5rem"}}>Nitin</div>
-                                    <CardImg2 src = {"https://media.discordapp.net/attachments/937023844143755264/937053121006424064/IMG_20210508_191907581_2.png?width=681&height=670"}
+                                    <CardImg2 src = {"https://cdn.discordapp.com/attachments/937023844143755264/937751144011272233/Untitled.png"}
                                     onClick = {e => clickHandler('https://www.linkedin.com/in/nitin-narayanan-n/')}/>
                                     <div style={{color: "white",fontSize : "1rem", marginTop: "0.5rem"}}>Backend Developer</div>
-                                </div>
+                                </CardPerson>
                                 
                             </CardBodyContainer2>
 
@@ -269,8 +327,7 @@ const Team = () => {
                                 </CardBody>
                             </CardBodyContainer>
 
-                            <CardFooterContainer>
-                            </CardFooterContainer>
+                            
                         </CardContents>  
                     </CardServices>
 
@@ -293,11 +350,6 @@ handles)
                                 </CardBody>
                             </CardBodyContainer>
 
-                            <CardFooterContainer>
-                                {/* <CardFooter>
-                                    Department Head Names and details
-                                </CardFooter> */}
-                            </CardFooterContainer>
                         </CardContents>  
                     </CardServices>
 
@@ -321,11 +373,7 @@ bonding sessions, etc.
                                 </CardBody>
                             </CardBodyContainer>
 
-                            <CardFooterContainer>
-                                {/* <CardFooter>
-                                    Department Head Names and details
-                                </CardFooter> */}
-                            </CardFooterContainer>
+                    
                         </CardContents>  
                     </CardServices>
 
@@ -347,11 +395,7 @@ however need be. (Topics for blog )
                                 </CardBody>
                             </CardBodyContainer>
 
-                            <CardFooterContainer>
-                                {/* <CardFooter>
-                                    Department Head Names and details
-                                </CardFooter> */}
-                            </CardFooterContainer>
+
                         </CardContents>  
                     </CardServices>
 
@@ -376,11 +420,6 @@ skills)
                                 </CardBody>
                             </CardBodyContainer>
 
-                            <CardFooterContainer>
-                                {/* <CardFooter>
-                                    Department Head Names and details
-                                </CardFooter> */}
-                            </CardFooterContainer>
                         </CardContents>  
                     </CardServices>
                 </CardContainer>

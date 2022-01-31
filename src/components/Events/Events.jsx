@@ -436,7 +436,7 @@ const Events = () => {
                             )}):<h3 style={{color:"white", paddingTop:"20%", justifySelf:"center", alignSelf:'center'}}>Currently No events in this category</h3>
                                 
             }
-                {role === 'A'? <EventAddButton to="/Events/CreateEvent">+</EventAddButton> : <div/>}
+                {role === 'A' || role === 'E'? <EventAddButton to="/Events/CreateEvent">+</EventAddButton> : <div/>}
                 
 
             
