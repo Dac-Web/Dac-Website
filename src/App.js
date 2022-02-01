@@ -127,8 +127,10 @@ function App() {
           <Footer/>
         </Route>
 
-        <Route exact path='/Events/CreateEvent' component={CreateEventPage}/>
-
+        <Route exact path='/Events/CreateEvent' component={CreateEventPage}>
+          {role !== 'U' && user != null && role !== 'M'? <CreateEventPage/> : <h1>You dont have permission</h1>}
+        </Route>
+        
 
         <Route exact path = '/Blog' component = {Blog}>
         <Blog/>
@@ -151,7 +153,7 @@ function App() {
         </Route>
 
         <Route exact path = '/JoinUs/Admin'>
-        {role !== 'U' && user != null && role !== 'M'?  <div> <RegAdminPage style={{marginBottom:"200px"}}/> <Footer /> </div>: <h1>You dont have permission to view this page</h1>}          
+        {role !== 'U' && user != null && role !== 'M' && role !== 'E'?  <div> <RegAdminPage style={{marginBottom:"200px"}}/> <Footer /> </div>: <h1>You dont have permission to view this page</h1>}          
         </Route>
 
 

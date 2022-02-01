@@ -60,7 +60,7 @@ const CreateEvent = () => {
                 <FormInput htmlFor='text' value={enddate} type="text" onChange = {event => setEnddate(event.target.value)}/>
               <FormLabel htmlFor='text'>Poster Image Link</FormLabel>
               <FormInput htmlFor='text' value={imagelink} type="text" onChange = {event => setImagelink(event.target.value)}/>
-              <FormButton type='submit' onClick = {handleUpload}>Continue</FormButton>
+              <FormButton type='submit' onClick = {handleUpload}>Create</FormButton>
             </Form>
           </FormContent>
         </FormWrap>

@@ -138,7 +138,7 @@ const RegAdminPage = () => {
           <Icon to='/'><img src={Logo} alt="" width="90" height="90"/> Data Analytics Club</Icon>
           <FormContent>
             <Form action='#'>
-              <FormH1>Create Event</FormH1>
+              <FormH1>Activate Join Link</FormH1>
               <br/>
               {available === 'OFF' ? <FormButton2 style={{width:"100%"}}>Link is {available}</FormButton2>:<FormButton3 style={{width:"100%"}}>Link is {available}</FormButton3>}
               <br/>
