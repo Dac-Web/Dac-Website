@@ -14,8 +14,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    height: '100%',
-    maxHeight: '400px',
+    height: '400px',
+    minHeight: 'fit-content',
     display: 'flex',
     flexDirection: 'column',
     

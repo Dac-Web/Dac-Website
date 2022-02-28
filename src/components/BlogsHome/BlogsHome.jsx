@@ -17,8 +17,8 @@ import { red } from '@mui/material/colors';
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    height: '100%',
-    maxHeight: '400px',
+    height: '400px',
+    minHeight: 'fit-content',
     display: 'flex',
     flexDirection: 'column',
     

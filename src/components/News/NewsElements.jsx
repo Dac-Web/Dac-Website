@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import {color} from '../Info/ColorTheme'
 export const NewsContainer = styled.div`
-  height: 800px;
+  min-height: 800px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;

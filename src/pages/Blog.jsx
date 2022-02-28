@@ -125,6 +125,7 @@ export default function Blog2() {
         {/* Hero unit */}
         
         
+        
           {/* End hero unit */}
           <Info {...Ourblog}/>
           <div style={{backgroundColor: color.Navy,marginTop:"-100px", width: "100%"}}>
