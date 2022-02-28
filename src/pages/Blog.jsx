@@ -10,7 +10,6 @@ import {Ourblog, Writeblog, Writeblog2} from '../components/Info/Data';
 import Navbar from '../components/Navbar/Navbar'
 import Sidebar from '../components/SideBar/Sidebar'
 
-import {BlogsCard, BlogsIcon, BlogsH1} from '../components/BlogsHome/BlogsHomeElements'
 
 import axios from 'axios'
 import { useStateValue } from '../StateProvider';
@@ -65,6 +64,7 @@ const useStyles = makeStyles((theme) => ({
     alignContent : 'space-around',
     marginLeft: '10%',
     marginBottom: '10%',
+    
   },
   cardMedia: {
     paddingTop: '56.25%', // 16:9
@@ -138,28 +138,31 @@ export default function Blog2() {
                       <BlogsH1>{blog.title}</BlogsH1>
                     </BlogsCard> */}
                     
-                  <Card className={classes.card}>
-                    <CardHeader
-                        avatar={
-                          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe" src='https://miro.medium.com/fit/c/164/164/1*ktnaz9ZQ5DuNs0Nm0s_U3A.png'>
-                          </Avatar>
-                        }
-                        title="Data Analytics Club"
-                        subheader={blog.date}
-                      />
+                    <Card className={classes.card}>
+                      <CardHeader
+                                    avatar={
+                                      <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe" src='https://miro.medium.com/fit/c/164/164/1*ktnaz9ZQ5DuNs0Nm0s_U3A.png'>
+                                      </Avatar>
+                                    }
+                                    title="Data Analytics Club"
+                                    subheader={blog.date}
+                                  />
                       <CardMedia
-                        component="img"
-                        height="140"
+                        className={classes.cardMedia}
                         image={blog.img}
-                        alt="green iguana"
+                        title="Image title"
                       />
-                      <CardContent classes={classes.cardContent}>
-                        <Typography gutterBottom variant="h5" component="div">
-                        {blog.title}
+                      <CardContent className={classes.cardContent}>
+                        <Typography gutterBottom variant="h5" component="h2">
+                          {blog.title}
                         </Typography>
                       </CardContent>
-                      <CardActions>
-                        <Button size="small" onClick={e => clickHandler(blog.link)}>Learn More</Button>
+                      <CardActions style={{display: "flex", justifyContent: "space-between"}}>
+                        <Button size="small" color="primary"  onClick = {e => clickHandler(blog.link)}>
+                          Learn More
+                        </Button>
+                    
+                        
                       </CardActions>
                     </Card>
                

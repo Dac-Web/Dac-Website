@@ -9,11 +9,15 @@ export const NewsContainer = styled.div`
   background: ${color.Navy};
 
   @media screen and (max-width: 768px) {
-    height: 1100px;
+    height: fit-content;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   @media screen and (max-width: 480px) {
-    height: 1300px;
+    height: fit-content;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
  `
 export const NewsWrapper = styled.div`
