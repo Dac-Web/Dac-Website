@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {color} from '../Info/ColorTheme'
 
 export const BlogsContainer = styled.div`
   height: 800px;
@@ -6,7 +7,7 @@ export const BlogsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #010606;
+  background: ${color.Navy};
 
   @media screen and (max-width: 768px) {
     height: 1100px;
@@ -35,7 +36,7 @@ export const BlogsWrapper = styled.div`
   }
 `
 export const BlogsCard = styled.div`
-  background: #fff;
+  background: #f5f5f5;
   display: flex;
   flex-direction: column;
   justify-content: center;

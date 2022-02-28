@@ -10,8 +10,7 @@ import { Link as LinkR } from 'react-router-dom'
 import { useStateValue } from "../../StateProvider";
 import "./Events.css"
 import {SocialIconLink, SocialIcons, Discord, Whatsapp} from './EventElements'
-
-
+import {color} from '../Info/ColorTheme'
 
 export const EventsContainer = styled.div`
     display : flex;
@@ -94,10 +93,10 @@ export const EventPhoto = styled.img`
 
 export const EventRegisterButton = styled.button`
     border-radius: 50px;
-    background: #01bf71;
+    background: ${color.Blue};
     white-space: nowrap;
     padding: 10px 22px;
-    color: #010606;
+    color: #fff;
     font-size: 16px;
     outline: none;
     border: none;
@@ -107,7 +106,7 @@ export const EventRegisterButton = styled.button`
     &:hover {
         transition: all 0.2s ease-in-out;
         background: #fff;
-        color: #010606;
+        color: ${color.Navy};
     }
     @media (max-width: 1366px) {
         display : none;
@@ -119,11 +118,11 @@ export const EventRegisterButton1 = styled.button`
     {
         display : flex;
         border-radius: 50px;
-        background: #01bf71;
+        background: ${color.Blue};
         white-space: nowrap;
         justify-content: center;
         padding: 10px 22px;
-        color: #010606;
+        color: #fff;
         font-size: 16px;
         outline: none;
         border: none;
@@ -135,7 +134,7 @@ export const EventRegisterButton1 = styled.button`
         &:hover {
             transition: all 0.2s ease-in-out;
             background: #fff;
-            color: #010606;
+            color: ${color.Navy};
         }
     }
     display : none;
@@ -148,10 +147,10 @@ export const EventAddButton = styled(LinkR)`
     position: sticky;
     bottom:5%;
     left:95%;
-    z-index:10;
-    background: #01bf71;
+    z-index:2;
+    background: ${color.Blue};
     white-space: nowrap;
-    color: #010606;
+    color: #fff;
     font-size: 40px;
     outline: none;
     border: none;
@@ -164,7 +163,7 @@ export const EventAddButton = styled(LinkR)`
     &:hover {
         transition: all 0.2s ease-in-out;
         background: #fff;
-        color: #010606;
+        color: ${color.Navy};
     }
     @media (max-width: 1366px) {
         display : none;
@@ -188,7 +187,7 @@ export const Timeline = styled.div`
     align-items: center;
     width: 30%;
     top: 15%;
-    background: #010606;
+    background: ${color.Navy};
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
       }
@@ -207,10 +206,10 @@ export const TimelineOption = styled.div`
     &:hover{
     text-decoration : none;
     color : white;
-    border-bottom : 3px solid green;
+    border-bottom : 3px solid ${color.Blue};
     }
     &.active{
-    border-bottom: 3px solid #01bf71
+    border-bottom: 3px solid ${color.Blue}
     text-decoration : none;
     }
 `
@@ -303,15 +302,15 @@ const Events = () => {
             <Navbar toggle={toggle}/>
             <Timelinebackground>
                 <Timeline>
-                    <TimelineOption style={eventstate === "upcoming" ? {color: "green"}:{}} onClick={() => setEventState("upcoming")}>Upcoming</TimelineOption>
+                    <TimelineOption style={eventstate === "upcoming" ? {color: "#2d14c4"}:{}} onClick={() => setEventState("upcoming")}>Upcoming</TimelineOption>
                     <TimelineOption style={eventstate === "ongoing" ?{
-                        borderLeft : "2px solid green", 
-                        borderRight: "2px solid green",
-                        color: "green"} : {
-                            borderLeft : "2px solid green", 
-                            borderRight: "2px solid green"}}
+                        borderLeft : "2px solid #2d14c4", 
+                        borderRight: "2px solid #2d14c4",
+                        color: "#2d14c4"} : {
+                            borderLeft : "2px solid #2d14c4", 
+                            borderRight: "2px solid #2d14c4"}}
                             onClick={() => setEventState("ongoing")}>Ongoing</TimelineOption>
-                    <TimelineOption style={eventstate === "completed" ? {color: "green"}:{}} onClick={() => setEventState("completed")}>Completed</TimelineOption>
+                    <TimelineOption style={eventstate === "completed" ? {color: "#2d14c4"}:{}} onClick={() => setEventState("completed")}>Completed</TimelineOption>
                 </Timeline>
             </Timelinebackground>
             
@@ -433,7 +432,7 @@ const Events = () => {
                         
                                 </EventsContainer>  
                                          
-                            )}):<h3 style={{color:"white", paddingTop:"20%", justifySelf:"center", alignSelf:'center'}}>Currently No events in this category</h3>
+                            )}):<h3 style={{color:"white", paddingTop:"20%", paddingBottom: "10%", justifySelf:"center", alignSelf:'center'}}>Currently No events in this category</h3>
                                 
             }
                 {role === 'A' || role === 'E'? <EventAddButton to="/Events/CreateEvent">+</EventAddButton> : <div/>}

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { MdArrowForward, MdKeyboardArrowRight } from 'react-icons/md'
-
+import {color} from '../Info/ColorTheme';
 export const HeroContainer = styled.div`
-  background: #0c0c0c;
+  background: ${color.Navy};
   display: flex;
   justify-content: center;
   align-items: center;

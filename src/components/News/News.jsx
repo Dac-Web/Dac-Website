@@ -1,10 +1,42 @@
 import React,{useState,useEffect} from 'react'
-import {NewsContainer, NewsWrapper, NewsCard, NewsIcon, NewsH2, NewsHeading} from './NewsElements'
+import {NewsContainer, NewsWrapper, NewsHeading} from './NewsElements'
 import axios from 'axios'
 import {Grid} from 'react-loading-icons'
 
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  card: {
+    height: '100%',
+    maxHeight: '400px',
+    display: 'flex',
+    flexDirection: 'column',
+    
+  },
+  cardMedia: {
+    paddingTop: '56.25%', // 16:9
+  },
+  cardContent: {
+    flexGrow: 1,
+    overflowY: 'scroll',
+    overflowX: 'hidden'
+  },
+  footer: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(6),
+  },
+}));
+
+
 const News = () => {
 
+  const classes = useStyles();
 
   const [news,setNews] = useState([])
 
@@ -36,7 +68,7 @@ const News = () => {
     console.log(news)
   }, [])
 
-  const clickHandler1 = (link) => {
+  const clickHandler = (link) => {
     window.open(link)
   }
 
@@ -46,11 +78,27 @@ const News = () => {
     <NewsContainer id='News'>
       <NewsHeading>News</NewsHeading>
       {news.length ? <NewsWrapper>
-        {news.map((i) => (<NewsCard onClick = {e => clickHandler1(i.link)}>
-          <NewsIcon src={i.img}/>
-          <NewsH2>{i.title}</NewsH2>
-          {/* <NewsButton onClick = {e => clickHandler1(e)}>Learn More</NewsButton> */}
-        </NewsCard>))}
+        {news.map((i) => (
+        <Card className={classes.card}>
+          <CardMedia
+            className={classes.cardMedia}
+            image={i.img}
+            title="Image title"
+          />
+          <CardContent className={classes.cardContent}>
+            <Typography gutterBottom variant="h5" component="h2">
+              {i.title}
+            </Typography>
+          </CardContent>
+          <CardActions style={{display: "flex", justifyContent: "space-between"}}>
+            <Button size="small" color="primary"  onClick = {e => clickHandler(i.link)}>
+              Learn More
+            </Button>
+        
+            
+          </CardActions>
+       </Card>
+        ))}
         
       </NewsWrapper>
       : <div>

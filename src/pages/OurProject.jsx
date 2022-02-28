@@ -15,7 +15,7 @@ import Sidebar from '../components/SideBar/Sidebar'
 
 
 import { NewsH1,  NewsCard,  NewsH2,  } from '../components/News/NewsElements';
-
+import { color } from '../components/Info/ColorTheme';
 
 import axios from 'axios'
 
@@ -112,7 +112,7 @@ export default function OurProject() {
           {/* End hero unit */}
           
           <Info {...OurProjects}/>
-          <div style={{backgroundColor: "lightgray",marginTop:"-100px"}}>
+          <div style={{backgroundColor: color.Grey,marginTop:"-100px"}}>
             <Container className={classes.cardGrid} maxWidth="100%" >
           <Grid container spacing={7}>
             {projects.map((project) => (

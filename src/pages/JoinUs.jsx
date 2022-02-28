@@ -10,6 +10,8 @@ import abt from "../images/aboutus.svg"
 import {db} from '../Firebase'
 import { Link as LinkR } from 'react-router-dom'
 import styled from 'styled-components'
+import {color} from '../components/Info/ColorTheme'
+
 
 export const EventAddButton = styled(LinkR)`
 
@@ -20,9 +22,9 @@ export const EventAddButton = styled(LinkR)`
     bottom:5%;
     left:95%;
     z-index:10;
-    background: #01bf71;
+    background: ${color.Blue};
     white-space: nowrap;
-    color: #010606;
+    color: #fff;
     font-size: 40px;
     outline: none;
     border: none;
@@ -35,7 +37,7 @@ export const EventAddButton = styled(LinkR)`
     &:hover {
         transition: all 0.2s ease-in-out;
         background: #fff;
-        color: #010606;
+        color: ${color.Blue};
     }
 
     @media (max-width: 1366px) {
@@ -96,7 +98,7 @@ function Join() {
         link2: registerlink
       };
     return (
-        <div style={{backgroundColor:"black"}}>
+        <div style={{backgroundColor:color.Navy}}>
             <Sidebar isOpen={isOpen} toggle={toggle} />
             <Navbar toggle={toggle}/>
             {role === "U" ? 

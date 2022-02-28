@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-
+import {color} from '../Info/ColorTheme'
 export const NewsContainer = styled.div`
   height: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #010606;
+  background: ${color.Navy};
 
   @media screen and (max-width: 768px) {
     height: 1100px;

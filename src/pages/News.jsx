@@ -14,10 +14,16 @@ import Sidebar from '../components/SideBar/Sidebar'
 
 import {Puff} from 'react-loading-icons'
 
-import { NewsH1,  NewsCard, NewsIcon} from '../components/News/NewsBlogsPageStyle';
-
+import {color} from '../components/Info/ColorTheme'
 import axios from 'axios'
 
+
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -92,8 +98,8 @@ export default function News() {
     console.log(news)
   }, [])
 
-  const clickHandler1 = (num) => {
-    window.open(news[num].link)
+  const clickHandler = (link) => {
+    window.open(link)
   }
 
   // For Research papers
@@ -132,17 +138,17 @@ export default function News() {
         
           {/* End hero unit */}
           <Info {...WeeklyNews}/>
-          <div style={{backgroundColor: "#010606",marginTop:"-100px", width: "100%"}}>
+          <div style={{backgroundColor: color.Navy,marginTop:"-100px", width: "100%"}}>
           <Container className={classes.cardGrid} maxWidth="70%" >
           {!news.length ? <Puff style={{marginLeft:"48%",marginBottom:"4%"}}/>:<></>}
           <Grid container spacing={7}>
             {news.map((newsIterator) => (
               <Grid item xs={12} sm={6} md={4}>
-                <NewsCard onClick = {e => clickHandler1(newsIterator.newsNo)}>
+                {/* <NewsCard onClick = {e => clickHandler(newsIterator.link)}>
                   <NewsIcon src = {newsIterator.img}/>
                   <NewsH1>{newsIterator.title}</NewsH1>
-                </NewsCard>
-                {/* <Card className={classes.card}>
+                </NewsCard> */}
+                <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
                     image={newsIterator.img}
@@ -154,16 +160,16 @@ export default function News() {
                     </Typography>
                   </CardContent>
                   <CardActions style={{display: "flex", justifyContent: "space-between"}}>
-                    <Button size="small" color="primary"  onClick = {e => clickHandler1(newsIterator.newsNo)}>
+                    <Button size="small" color="primary"  onClick = {e => clickHandler(newsIterator.link)}>
                       Learn More
                     </Button>
                     <div> 
-                      <ShareIcon color="black" style={{marginRight: "10px"}}/>
-                      <FavoriteBorderIcon/>
+                      
+                      {/* <FavoriteBorderIcon/> */}
                     </div> 
                     
                   </CardActions>
-                </Card> */}
+                </Card>
               </Grid>
             ))}
           </Grid>
@@ -171,17 +177,17 @@ export default function News() {
           
           </div>
           <Info {...Researchpapers}/>
-          <div style={{backgroundColor: "lightgray",marginTop:"-100px"}}>
+          <div style={{backgroundColor: color.Grey,marginTop:"-100px"}}>
             {!researchPapers.length ? <Puff style={{marginLeft:"48%",marginBottom:"4%"}}/>:<></>}
             <Container className={classes.cardGrid} maxWidth="80%" >
           <Grid container spacing={7}>
             {researchPapers.map((paper) => (
               <Grid item xs={12} sm={6} md={4}>
-                <NewsCard onClick = {e => clickHandler1(paper.paperNo)}>
+                {/* <NewsCard onClick = {e => clickHandler(paper.link)}>
                   <NewsH1>{paper.title}</NewsH1>
                   
-                </NewsCard>
-                {/* <Card className={classes.card}>
+                </NewsCard> */}
+                <Card className={classes.card}>
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
                       {paper.title}
@@ -191,15 +197,11 @@ export default function News() {
                     </Typography>
                   </CardContent>
                   <CardActions style={{display: "flex", justifyContent: "space-between"}}>
-                    <Button size="small" color="primary" onClick = {e => clickHandler2(paper.paperNo)}>
+                    <Button size="small" color="primary" onClick = {e => clickHandler(paper.link)}>
                       Learn More
                     </Button>
-                    <div> 
-                      <ShareIcon color="black" style={{marginRight: "10px"}}/>
-                      <FavoriteBorderIcon/>
-                    </div> 
                   </CardActions>
-                </Card> */}
+                </Card>
               </Grid>
             ))}
           </Grid>
