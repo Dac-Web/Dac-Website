@@ -28,6 +28,7 @@ export const NavbarContainer = styled.div`
   z-index: 1;
   width: 100%;
   max-width: 1500px;
+
 `
 export const NavLogo = styled(LinkR) `
   color:#fff;
@@ -39,7 +40,7 @@ export const NavLogo = styled(LinkR) `
   font-weight: bold;
   text-decoration: none;
   color : white;
-
+  margin-left: 10px;
   &:hover
   {
     color : white;
@@ -70,7 +71,7 @@ export const NavMenu = styled.ul`
   justify-content: center;
   list-style: none;
   text-align: center;
-  
+  margin-left: 16%;
 
   @media screen and (max-width: 768px) {
     display: none;

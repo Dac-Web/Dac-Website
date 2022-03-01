@@ -59,7 +59,7 @@ const Footer = () => {
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to='/' onClick={toggleHome}>
-            <img src={Logo} width="90px" height="90px"/> Data Analytics Club
+            <img src={Logo} width="90px" height="90px"/> 
             </SocialLogo>
             <SocialIcons>
               {/* <SocialIconLink href='/' target='_blank' arial-label='Facebook'>
