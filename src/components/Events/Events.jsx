@@ -391,7 +391,7 @@ const Events = () => {
                                 </EventRight>
                     
                             </EventsContainer>     
-                        )}):<h3 style={{color:"white", paddingTop:"20%", paddingLeft: "15%", paddingRight:"15%", justifySelf:"center", alignSelf:'center'}}>Currently No events in this category</h3>: upcomingevents.length ? upcomingevents.map((eventIndex) => {
+                        )}):<h3 style={{color:"white", paddingTop:"20%", justifySelf:"center", alignSelf:'center'}}>Currently No events in this category</h3>: upcomingevents.length ? upcomingevents.map((eventIndex) => {
 
                             // console.log("This is event indices inside renderer ",eventIndex)
                             
@@ -432,7 +432,7 @@ const Events = () => {
                         
                                 </EventsContainer>  
                                          
-                            )}):<h3 style={{color:"white",paddingLeft: "15%", paddingRight:"15%", paddingTop:"30%", paddingBottom: "10%", justifySelf:"center", alignSelf:'center'}}>Currently No events in this category</h3>
+                            )}):<h3 style={{color:"white", paddingTop:"20%", paddingBottom: "10%", justifySelf:"center", alignSelf:'center'}}>Currently No events in this category</h3>
                                 
             }
                 {role === 'A' || role === 'E'? <EventAddButton to="/Events/CreateEvent">+</EventAddButton> : <div/>}
