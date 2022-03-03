@@ -47,7 +47,7 @@ const Footer = () => {
 
             <FooterLinkItems>
               <FooterLinkTitle>Social Media</FooterLinkTitle>
-                <FooterLink onClick = {e => clickHandler('https://www.instagram.com/dac_vit_chennai/')}>Instagram</FooterLink>
+                <FooterLink onClick = {e => clickHandler('https://www.instagram.com/dac_vitcc/')}>Instagram</FooterLink>
                 <FooterLink onClick = {e => clickHandler('https://discord.gg/FzPzajkh3A')}>Discord</FooterLink>
                 <FooterLink onClick = {e => clickHandler('https://www.linkedin.com/company/dacvitcc/')}>LinkedIn</FooterLink>
                 <FooterLink onClick = {e => clickHandler('https://github.com/Data-Analytics-Club-VITCC')}>Github</FooterLink>
